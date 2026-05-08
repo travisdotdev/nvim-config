@@ -93,6 +93,8 @@ vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 vim.api.nvim_set_hl(0, "ColorColumn", { bg = "none" })
 vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NeoTreeNormal', { bg = 'none'})
+vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', { bg = 'none'})
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
