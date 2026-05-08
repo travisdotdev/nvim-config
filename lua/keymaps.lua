@@ -20,12 +20,6 @@ vim.keymap.set('n', '<C-Down>',  '<cmd>resize -2<cr>',          { desc = 'Decrea
 vim.keymap.set('n', '<C-Left>',  '<cmd>vertical resize -2<cr>', { desc = 'Decrease window width' })
 vim.keymap.set('n', '<C-Right>', '<cmd>vertical resize +2<cr>', { desc = 'Increase window width' })
 
--- Telescope 
-local telescope = require('telescope.builtin')
-vim.keymap.set('n', '<leader>sf', telescope.find_files, { desc = 'Find files' })
-vim.keymap.set('n', '<leader>sg', telescope.live_grep,  { desc = 'Live grep' })
-vim.keymap.set('n', '<leader>sb', telescope.buffers,    { desc = 'Find buffers' })
-
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>', { desc = 'Save file' })
 
 -- Clear search highlights on Esc 
@@ -45,3 +39,18 @@ vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'Move line up' })
 
 vim.keymap.set({ 'n', 'v' }, '<S-h>', '^', { desc = 'Go to start of line' })
 vim.keymap.set({ 'n', 'v' }, '<S-l>', '$', { desc = 'Go to end of line' })
+
+-- ========================
+-- PLUGIN SPECIFIC KEYMAPS
+-- ========================
+
+-- Telescope 
+local telescope = require('telescope.builtin')
+vim.keymap.set('n', '<leader>sf', telescope.find_files, { desc = 'Find files' })
+vim.keymap.set('n', '<leader>sg', telescope.live_grep,  { desc = 'Live grep' })
+vim.keymap.set('n', '<leader>sb', telescope.buffers,    { desc = 'Find buffers' })
+
+-- Neotree
+vim.keymap.set('n', '\\', '<cmd>Neotree reveal<cr>', { desc = 'Neotree reveal', silent = true })
+vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<cr>', { desc = 'Toggle file explorer' })
+

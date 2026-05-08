@@ -64,6 +64,10 @@ vim.pack.add {
 	'https://github.com/folke/which-key.nvim',
 	'https://github.com/akinsho/toggleterm.nvim',
 	'https://github.com/lewis6991/gitsigns.nvim',
+	'https://github.com/nvim-lualine/lualine.nvim',
+	'https://github.com/nvim-tree/nvim-web-devicons',
+	'https://github.com/nvim-neo-tree/neo-tree.nvim',
+	'https://github.com/MunifTanjim/nui.nvim',
 }
 
 
@@ -80,6 +84,25 @@ require('toggleterm').setup({
     open_mapping = '<leader>tf',
     direction = 'horizontal',
 	shade_terminals = false,
+})
+require('lualine').setup({
+	options = {
+		theme = 'tokyonight',
+		icons_enabled = true,
+	}
+})
+require('neo-tree').setup({
+	filesystem = {
+		filtered_items = {
+			hide_dotfiles = false,
+			hide_gitignored = false,
+		},
+		window = {
+			mappings = {
+				['\\'] = 'close_window',
+			},
+		},
+	},
 })
 
 vim.schedule(function()
