@@ -68,11 +68,17 @@ vim.pack.add {
 	'https://github.com/nvim-tree/nvim-web-devicons',
 	'https://github.com/nvim-neo-tree/neo-tree.nvim',
 	'https://github.com/MunifTanjim/nui.nvim',
+	{
+		src = 'https://github.com/nvim-treesitter/nvim-treesitter',
+		branch = 'main',
+		build = ':TSUpdate',
+	},
 }
 
 
 require('plugins')
 require('keymaps')
+require('lsp')
 vim.cmd.colorscheme('tokyonight')
 
 vim.schedule(function()
