@@ -74,6 +74,7 @@ vim.cmd.colorscheme('tokyonight')
 require('keymaps')
 require('gitsigns').setup()
 require('which-key').setup({})
+require('nvim-autopairs').setup({})
 require('toggleterm').setup({
     size = 15,
     open_mapping = '<leader>tf',
