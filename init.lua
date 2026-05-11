@@ -78,6 +78,15 @@ vim.pack.add {
 	'https://github.com/akinsho/bufferline.nvim',
     'https://github.com/nvim-tree/nvim-web-devicons',
 	'https://github.com/akinsho/bufferline.nvim',
+    'https://github.com/mason-org/mason.nvim',
+    'https://github.com/mason-org/mason-lspconfig.nvim',
+    'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim',
+    'https://github.com/neovim/nvim-lspconfig',
+    'https://github.com/folke/lazydev.nvim',
+	{ 
+		src = 'https://github.com/saghen/blink.cmp',
+		version = vim.version.range('1.0'),
+	},
 	{
 		src = 'https://github.com/nvim-treesitter/nvim-treesitter',
 		branch = 'main',
@@ -88,11 +97,12 @@ vim.pack.add {
 require('plugins')
 require('keymaps')
 require('lsp')
+require('blink')
 require('bufferline_config')
 vim.cmd.colorscheme('tokyonight')
 
 -- ========================
--- EXTRA API STUFF 
+-- EXTRA STUFF 
 -- ========================
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
@@ -101,6 +111,13 @@ vim.api.nvim_set_hl(0, "ColorColumn", { bg = "none" })
 vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NeoTreeNormal', { bg = 'none'})
 vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', { bg = 'none'})
+vim.api.nvim_set_hl(0, 'BlinkCmpMenu', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'BlinkCmpMenuBorder', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'BlinkCmpDoc', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'BlinkCmpDocBorder', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'TelescopeNormal', {bg = 'none'})
+-- vim.api.nvim_set_hl(0, 'TelescopeBorder', {bg = 'none'})
+
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',

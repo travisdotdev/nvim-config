@@ -69,3 +69,24 @@ vim.keymap.set('n', '[[', function() Snacks.words.jump(-vim.v.count1) end,      
 vim.keymap.set('n', '<Tab>', '<cmd>bnext<cr>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<S-Tab>', '<cmd>bprevious<cr>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<cr>', { desc = 'Delete buffer' })
+
+-- LSP
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(event)
+        local map = function(keys, func, desc)
+            vim.keymap.set('n', keys, func, { buffer = event.buf, desc = desc })
+        end
+
+        map('gd', vim.lsp.buf.definition, 'Go to definition')
+        map('gr', vim.lsp.buf.references, 'Go to references')
+        map('gi', vim.lsp.buf.implementation, 'Go to implementation')
+        map('grn', vim.lsp.buf.rename, 'Rename symbol')
+        map('gra', vim.lsp.buf.code_action, 'Code action')
+        map('K', vim.lsp.buf.hover, 'Hover documentation')
+        map('gl', vim.diagnostic.open_float, 'Open diagnostic float')
+        map('[d', vim.diagnostic.goto_prev, 'Previous diagnostic')
+        map(']d', vim.diagnostic.goto_next, 'Next diagnostic')
+    end,
+})
+
+
