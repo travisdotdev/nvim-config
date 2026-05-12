@@ -51,6 +51,7 @@ vim.opt.confirm = true
 
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.timeoutlen = 300
+-- vim.o.fileformat = 'unix'
 
 
 vim.schedule(function()
@@ -72,16 +73,13 @@ vim.pack.add {
 	'https://github.com/akinsho/toggleterm.nvim',
 	'https://github.com/lewis6991/gitsigns.nvim',
 	'https://github.com/nvim-lualine/lualine.nvim',
-	'https://github.com/nvim-tree/nvim-web-devicons',
 	'https://github.com/nvim-neo-tree/neo-tree.nvim',
 	'https://github.com/MunifTanjim/nui.nvim',
-	'https://github.com/akinsho/bufferline.nvim',
     'https://github.com/nvim-tree/nvim-web-devicons',
 	'https://github.com/akinsho/bufferline.nvim',
     'https://github.com/mason-org/mason.nvim',
     'https://github.com/mason-org/mason-lspconfig.nvim',
     'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim',
-    'https://github.com/neovim/nvim-lspconfig',
     'https://github.com/folke/lazydev.nvim',
     'https://github.com/mfussenegger/nvim-dap-python',
 	'https://github.com/mfussenegger/nvim-dap',

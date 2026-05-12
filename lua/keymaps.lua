@@ -40,6 +40,11 @@ vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'Move line up' })
 vim.keymap.set({ 'n', 'v' }, '<S-h>', '^', { desc = 'Go to start of line' })
 vim.keymap.set({ 'n', 'v' }, '<S-l>', '$', { desc = 'Go to end of line' })
 
+vim.api.nvim_create_user_command('StripCR', function()
+    vim.cmd('%s/\r//ge')
+    vim.bo.fileformat = 'unix'
+end, { desc = 'Strip Windows line endings' })
+
 -- ========================
 -- PLUGIN SPECIFIC KEYMAPS
 -- ========================
