@@ -118,7 +118,7 @@ vim.api.nvim_set_hl(0, 'BlinkCmpMenu', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'BlinkCmpMenuBorder', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'BlinkCmpDoc', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'BlinkCmpDocBorder', { bg = 'none' })
-
+vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg = "#737aa2", undercurl = true, sp = "#737aa2" }) -- better cosmetic visibility for my setup
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
