@@ -5,6 +5,7 @@ require('mason-tool-installer').setup {
         'pyright',
         'lua-language-server',
         'debugpy',
+		'clangd'
     },
 }
 
@@ -29,6 +30,7 @@ local servers = {
             },
         },
     },
+	clangd = {}
 }
 
 require('mason-lspconfig').setup {
