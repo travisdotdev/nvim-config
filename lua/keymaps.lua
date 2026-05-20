@@ -36,6 +36,7 @@ vim.keymap.set('v', '>', '>gv', { desc = 'Indent right' })
 -- Move lines up/down in visual mode 
 vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv", { desc = 'Move line down' })
 vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'Move line up' })
+vim.keymap.set('n', '<C-b>', '<C-v>',  {desc = 'Enter visual block mode'})
 
 vim.keymap.set({ 'n', 'v' }, '<S-h>', '^', { desc = 'Go to start of line' })
 vim.keymap.set({ 'n', 'v' }, '<S-l>', '$', { desc = 'Go to end of line' })

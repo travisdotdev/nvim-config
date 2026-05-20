@@ -3,6 +3,26 @@ local dapui = require('dapui')
 
 local debugpy_path = vim.fn.stdpath('data') .. '/mason/packages/debugpy/venv/bin/python'
 require('dap-python').setup(debugpy_path)
+-- C 
+dap.adapters.gdb = {
+	type = 'executable',
+	command = 'gdb',
+	args = { '--interpreter=dap', '--quiet' },
+
+}
+
+dap.configurations.c = {
+	{
+		name = 'Launch',
+		type = 'gdb',
+		request = 'launch',
+		program = function()
+			return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+		end,
+		cwd = '${workspaceFolder}',
+		stopAtBeginningOfMainSubprogram = true,
+	},
+}
 
 dapui.setup {
     icons = { expanded = '▾', collapsed = '▸', current_frame = '*' },
@@ -32,3 +52,5 @@ vim.keymap.set('n', '<leader>pB', function()
 end, { desc = 'Debug: Conditional Breakpoint' })
 vim.keymap.set('n', '<leader>pu', dapui.toggle, { desc = 'Debug: Toggle UI' })
 vim.keymap.set('n', '<leader>p=', '<C-w>=', { desc = 'Debug: Equalise Windows' })
+
+
