@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "base16-nvim": {
+      "rev": "23e5128eb5f629c29532c24a1e733cbe019f05bb",
+      "src": "https://github.com/RRethy/base16-nvim"
+    },
     "blink.cmp": {
       "rev": "49f211fe5d729df53df4c042d7c3464cf47d199e",
       "src": "https://github.com/saghen/blink.cmp",

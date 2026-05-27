@@ -55,6 +55,7 @@ local telescope = require('telescope.builtin')
 vim.keymap.set('n', '<leader>sf', telescope.find_files, { desc = 'Find files' })
 vim.keymap.set('n', '<leader>sg', telescope.live_grep,  { desc = 'Live grep' })
 vim.keymap.set('n', '<leader>sb', telescope.buffers,    { desc = 'Find buffers' })
+vim.keymap.set('n', '<leader>sc', telescope.colorscheme, { desc = 'Switch colorscheme' })
 
 -- Neotree
 vim.keymap.set('n', '\\', '<cmd>Neotree reveal<cr>', { desc = 'Neotree reveal', silent = true })

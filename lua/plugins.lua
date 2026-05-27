@@ -1,7 +1,12 @@
 require('telescope').setup({
-	defaults = {
-		winblend = 20,
-	},
+    defaults = {
+        winblend = 20,
+    },
+    pickers = {
+        colorscheme = {
+            enable_preview = true,
+        },
+    },
 })
 require('which-key').setup({})
 require('nvim-autopairs').setup({})

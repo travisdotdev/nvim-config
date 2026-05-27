@@ -85,6 +85,7 @@ vim.pack.add {
 	'https://github.com/mfussenegger/nvim-dap',
     'https://github.com/rcarriga/nvim-dap-ui',
     'https://github.com/nvim-neotest/nvim-nio',
+	'https://github.com/RRethy/base16-nvim',
 	{
 		src = 'https://github.com/saghen/blink.cmp',
 		version = vim.version.range('1.0'),
@@ -102,24 +103,16 @@ require('lsp')
 require('blink')
 require('bufferline_config')
 require('debugger')
-vim.cmd.colorscheme('tokyonight')
 
--- ========================
--- EXTRA STUFF 
--- ========================
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-vim.api.nvim_set_hl(0, "ColorColumn", { bg = "none" })
-vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'NeoTreeNormal', { bg = 'none'})
-vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', { bg = 'none'})
-vim.api.nvim_set_hl(0, 'BlinkCmpMenu', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'BlinkCmpMenuBorder', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'BlinkCmpDoc', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'BlinkCmpDocBorder', { bg = 'none' })
-vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg = "#737aa2", undercurl = true, sp = "#737aa2" }) -- better cosmetic visibility for my setup
+--i vim.cmd.colorscheme('tokyonight')
+--vim.cmd.colorscheme('base16-black-metal-gorgoroth')
+vim.cmd.colorscheme('base16-darkviolet')
+--vim.cmd.colorscheme('base16-eris')
 
+
+-- -- ========================
+-- -- EXTRA STUFF 
+-- -- ========================
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
@@ -128,5 +121,24 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+local function set_transparency()
+    vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'ColorColumn', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'NeoTreeNormal', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'BlinkCmpMenu', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'BlinkCmpMenuBorder', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'BlinkCmpDoc', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'BlinkCmpDocBorder', { bg = 'none' })
+    vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { fg = '#737aa2', undercurl = true, sp = '#737aa2' })
+end
 
+vim.api.nvim_create_autocmd('ColorScheme', {
+    group = vim.api.nvim_create_augroup('user-transparency', { clear = true }),
+    callback = set_transparency,
+})
 
+set_transparency()
