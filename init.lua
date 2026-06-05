@@ -106,9 +106,9 @@ require('debugger')
 
 --i vim.cmd.colorscheme('tokyonight')
 --vim.cmd.colorscheme('base16-black-metal-gorgoroth')
--- vim.cmd.colorscheme('base16-darkviolet')
+vim.cmd.colorscheme('base16-darkviolet')
 --vim.cmd.colorscheme('base16-eris')
-vim.cmd.colorscheme('base16-nova')
+-- vim.cmd.colorscheme('base16-nova')
 
 
 -- -- ========================
