@@ -86,6 +86,7 @@ vim.pack.add {
     'https://github.com/rcarriga/nvim-dap-ui',
     'https://github.com/nvim-neotest/nvim-nio',
 	'https://github.com/RRethy/base16-nvim',
+	'https://github.com/slugbyte/lackluster.nvim',
 	{
 		src = 'https://github.com/saghen/blink.cmp',
 		version = vim.version.range('1.0'),
@@ -109,7 +110,7 @@ require('debugger')
 vim.cmd.colorscheme('base16-darkviolet')
 --vim.cmd.colorscheme('base16-eris')
 -- vim.cmd.colorscheme('base16-nova')
-
+-- vim.cmd.colorscheme('lackluster-hack')
 
 -- -- ========================
 -- -- EXTRA STUFF 
