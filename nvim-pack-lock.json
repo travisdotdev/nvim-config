@@ -41,6 +41,10 @@
       "rev": "e54f5bf5f12c560da31c17eee5b3e1bd369f3ff9",
       "src": "https://github.com/mason-org/mason.nvim"
     },
+    "mfd.nvim": {
+      "rev": "72ae627792960a7e490cb5242a78c570d02ba775",
+      "src": "https://github.com/kungfusheep/mfd.nvim"
+    },
     "neo-tree.nvim": {
       "rev": "ff84e6e1608b24773f1b73cd4182e0bcf2b3d637",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
