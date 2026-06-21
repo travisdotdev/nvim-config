@@ -1,8 +1,8 @@
 vim.g.mapleader = ' '
-
 -- ========================
 -- OPTIONS
 -- ========================
+vim.opt.termguicolors = true
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
 vim.opt.cursorline = true -- highlight current line
@@ -106,13 +106,18 @@ require('blink')
 require('bufferline_config')
 require('debugger')
 
---vim.cmd.colorscheme('mfd-lumon')
+
+-- -- ========================
+-- -- COLOR SCHEMES 
+-- -- ========================
+
 --vim.cmd.colorscheme('tokyonight')
 --vim.cmd.colorscheme('base16-black-metal-gorgoroth')
-vim.cmd.colorscheme('base16-darkviolet')
+--vim.cmd.colorscheme('base16-darkviolet')
 --vim.cmd.colorscheme('base16-eris')
--- vim.cmd.colorscheme('base16-nova')
--- vim.cmd.colorscheme('lackluster-hack')
+vim.cmd.colorscheme('base16-nova')
+--vim.cmd.colorscheme('lackluster-hack')
+--vim.cmd.colorscheme('mfd-lumon')
 
 -- -- ========================
 -- -- EXTRA STUFF 
@@ -137,8 +142,8 @@ local function set_transparency()
     vim.api.nvim_set_hl(0, 'BlinkCmpMenuBorder', { bg = 'none' })
     vim.api.nvim_set_hl(0, 'BlinkCmpDoc', { bg = 'none' })
     vim.api.nvim_set_hl(0, 'BlinkCmpDocBorder', { bg = 'none' })
-    vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { fg = '#a01fff', undercurl = true, sp = '#737aa2' })
-    vim.api.nvim_set_hl(0, 'Comment', { fg = '#57807c', italic = true})
+	vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { fg = '#a01fff', undercurl = true, sp = '#737aa2' })
+	vim.api.nvim_set_hl(0, 'Comment', { fg = '#57807c', italic = true})
 	vim.api.nvim_set_hl(0, 'CursorLine', {bg = '#043a3b'})
 	vim.api.nvim_set_hl(0, 'LineNr', { fg = '#05f8fc' })
 end
