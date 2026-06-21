@@ -1,4 +1,4 @@
-#### nvim config
+# nvim config
 
 Built on **Neovim 0.12+** with native vim.pack plugin management.
 
