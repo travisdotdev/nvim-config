@@ -1,4 +1,4 @@
-# nvim config
+# Nvim config
 
 Built on **Neovim 0.12+** with native vim.pack plugin management.
 
@@ -8,13 +8,13 @@ Neovim 0.12+
 WSL2 (Ubuntu) on Windows
 Nerd Font (for glyphs, icons etc.)
 
-Setup (UBUNTU via WSL)
+## Setup (UBUNTU via WSL)
 
-1. I use WSL for now
+### 1. I use WSL for now
 
     wsl --install -d Ubuntu
 
-2. Neovim 0.12+
+ ### 2. Neovim 0.12+
 
     The apt version is too old. Install the latest release:
 
@@ -24,21 +24,22 @@ Setup (UBUNTU via WSL)
     echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
     source ~/.bashrc
 
-3. Dependencies
+### 3. Dependencies
 
     sudo apt update
     sudo apt install -y build-essential unzip ripgrep fd-find nodejs npm python3-pip python3-venv
     npm install -g tree-sitter-cli
 
-4. Config
+### 4. Config
 
     git clone https://github.com/travisdotdev/nvim-config.git ~/.config/nvim
 
-5. First launch
+### 5. First launch
 
-    nvim
+    run in terminal: nvim
 
-    On first launch, vim.pack downloads all plugins — approve the prompt, then restart Neovim. 
+    On first launch, vim.pack downloads all plugins 
+    approve the prompt, then restart Neovim. 
     Mason installs the language servers (pyright, lua_ls, clangd, debugpy) automatically 
     add or remove whatever lsps/debuggers you need.
 
