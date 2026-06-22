@@ -8,6 +8,8 @@ Neovim 0.12+
 WSL2 (Ubuntu) on Windows
 Nerd Font (for glyphs, icons etc.)
 
+![dashboard](assets/dashboard.png)
+
 ## Setup (UBUNTU via WSL)
 
 ### 1. I use WSL for now
