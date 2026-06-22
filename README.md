@@ -8,7 +8,7 @@ Neovim 0.12+
 WSL2 (Ubuntu) on Windows
 Nerd Font (for glyphs, icons etc.)
 
-![dashboard](assets/dashboard.png)
+![dashboard](assets/nvim_dashboard.png)
 
 ## Setup (UBUNTU via WSL)
 
@@ -48,3 +48,4 @@ Nerd Font (for glyphs, icons etc.)
     Run :checkhealth to verify the setup.
 
     keymaps are in keymap.lua
+![dashboard](assets/example_workflow.png)
