@@ -52,6 +52,7 @@ vim.opt.confirm = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.timeoutlen = 300
 -- vim.o.fileformat = 'unix'
+vim.opt.fillchars = { eob = " " }
 
 
 vim.schedule(function()
