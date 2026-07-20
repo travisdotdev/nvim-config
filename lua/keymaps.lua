@@ -46,6 +46,17 @@ vim.api.nvim_create_user_command('StripCR', function()
     vim.bo.fileformat = 'unix'
 end, { desc = 'Strip Windows line endings' })
 
+vim.keymap.set('n', "<C-d>", "<C-d>zz", { desc = "Move down in buffer with cursor centered" })
+vim.keymap.set('n', "<C-u>", "<C-u>zz", { desc = "Move up in buffer with cursor centered" })
+
+vim.keymap.set('n', 'n', 'nzzzv', { desc = "Next search result cursor centered" })
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = "Previous search result cursor centered" })
+
+vim.keymap.set("n", "<leader>u", function()
+	vim.cmd.packadd("nvim.undotree")
+	require("undotree").open()
+end, {desc = "Toggle Builtin Undotree"})
+
 -- ========================
 -- PLUGIN SPECIFIC KEYMAPS
 -- ========================
